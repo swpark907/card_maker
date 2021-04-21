@@ -6,11 +6,9 @@ const firebaseConfig = {
     authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
     projectId: process.env.REACT_APP_FIREBASE_DB_URL,
     databaseURL: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-    
-    
     };
 
-firebase.initializeApp(firebaseConfig);
+const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-const auth = firebase.auth();
-const firestore = firebase.firestore();
+
+export default firebaseApp

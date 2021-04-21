@@ -1,0 +1,8 @@
+.loginSection{
+    width: 30%;
+    border: solid 1px grey;
+    border-radius: 20px;
+    padding: 1em 0;
+    margin: auto;
+    text-align: center;
+}

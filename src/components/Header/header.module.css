@@ -1,0 +1,29 @@
+@value makerPink from '../../common/colors.css';
+@value makerGrey from '../../common/colors.css';
+
+header{
+    background-color: makerPink;  
+    position: relative;
+    
+}
+
+.title{
+    padding: 20px;
+}
+
+.logout{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: makerGrey;
+    transition: all 200ms ease;
+    cursor: pointer;
+    padding: 0.5em;
+    position: absolute;
+    top: 2px;
+    right: 5px;
+}
+
+.logout:hover{
+    color: black;
+}

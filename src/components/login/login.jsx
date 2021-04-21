@@ -4,17 +4,23 @@ import Header from '../Header/header';
 import Authentic from './authentic';
 import 'firebase/auth';
 import 'firebase/firestore'
+import styles from './login.module.css'
 
 
-const Login = (props) => (
-        <div className="login-modal">
+const Login = ({authService}) => {
 
-            <Header></Header>
-            <Authentic></Authentic>
+    return(
+        <section className={styles.loginSection}>
+
+            <Header></Header>            
+            <Authentic authService={authService}></Authentic>
             <Footer></Footer>
-
-
-        </div>
+        </section>
     );
+
+}
+
+
+
 
 export default Login;

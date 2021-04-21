@@ -1,0 +1,6 @@
+@value makerLightPink from '../../common/colors.css';
+
+footer{
+    background-color: makerLightPink;    
+    padding: 10px 0;    
+}

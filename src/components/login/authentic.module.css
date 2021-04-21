@@ -1,0 +1,32 @@
+@value makerGrey from '../../common/colors.css';
+
+ul{
+    padding: 0px;    
+}
+
+ul li{
+    list-style: none;
+}
+
+.title{
+    font-size: 1.7em;
+    text-transform: uppercase;
+}
+
+.loginBtn{
+    margin: 10px auto;
+    background-color: transparent;
+    outline: none;
+    border: solid 1px makerGrey;
+    border-radius: 10px;
+    width: 70%;
+    padding: 0.5em;
+    font-size: 1.2rem;
+    transition: all 200ms ease;
+    
+}
+
+.loginBtn:hover{
+    color: white;
+    background-color: makerGrey;
+}

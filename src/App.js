@@ -1,11 +1,13 @@
-import './App.css';
 import Login from './components/login/login';
+import styles from './app.module.css';
 
-function App() {
+function App({authService}) {
+
+  console.log(process.env.REACT_APP_FIREBASE_API_KEY)
   return (
     <div className="App">
 
-      <Login></Login>
+      <Login authService={authService}></Login>
       
     </div>
   );
