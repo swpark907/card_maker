@@ -1,6 +1,15 @@
 @value makerLightPink from '../../common/colors.css';
 
-footer{
+.footer{
     background-color: makerLightPink;    
-    padding: 10px 0;    
+    padding: 20px 0;        
+    font-size: 1.2em;
+    
+    width: 100%;
+}
+
+.cardSection.footer{
+    position: absolute;
+    bottom: 0;
+
 }

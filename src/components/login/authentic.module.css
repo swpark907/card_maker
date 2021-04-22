@@ -13,6 +13,10 @@ ul li{
     text-transform: uppercase;
 }
 
+.authentic{
+    padding: 50px 0;
+}
+
 .loginBtn{
     margin: 10px auto;
     background-color: transparent;

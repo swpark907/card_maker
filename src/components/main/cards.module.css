@@ -1,0 +1,22 @@
+@value mediaQuery from "../../common/size.css";
+
+.cardSection{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    flex: 1;
+}
+
+
+
+@media screen and (max-width: mediaQuery){
+    .container{
+        display: block;
+    }
+}

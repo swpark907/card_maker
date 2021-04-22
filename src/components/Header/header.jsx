@@ -1,11 +1,9 @@
 import React from 'react';
 import styles from './header.module.css'
 
-const Header = (props) => {
+const Header = ({onLogout}) => {
     
-    const onLogout = () => {
-        return false;
-    }
+    
 
     return(
             <header>
