@@ -6,19 +6,19 @@ import CardPreview from './card.preview';
 import styles from './cards.module.css';
 
 
-const Cards = ({authService}) => {
+const Cards = ({authService, cardData}) => {
     const onLogout = () => {
         authService.logout();
     }    
 
     return (
         <section className={styles.cardSection}>
-            <Header onLogout={onLogout}></Header>
+            <Header onLogout={onLogout} />
             <div className={styles.container}>
-                <CardMaker />
-                <CardPreview />                
+                <CardMaker cardData={cardData}/>
+                <CardPreview cardData={cardData}/>                
             </div>
-            <Footer></Footer>
+            <Footer/>
         </section>
 );
 }
