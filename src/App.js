@@ -2,10 +2,11 @@ import Login from './components/login/login';
 import styles from './app.module.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Cards from './components/main/cards';
+import { useState } from 'react';
 
 function App({authService}) {
   
-  const cardData = [
+  const [cardData, setCardData] = useState([
       {
         name: '이름',
         company: 'Samsung',
@@ -27,7 +28,13 @@ function App({authService}) {
         fileURL: 'images/logo.png',
         },
       
-  ]
+  ])
+
+  const addCard = (newCard) => {
+    console.log(newCard);
+    const updated = [...cardData, newCard];
+    setCardData(updated);
+  }
 
   
 
@@ -39,7 +46,7 @@ function App({authService}) {
             <Login authService={authService}></Login>
           </Route>
           <Route exact path='/cards'>
-            <Cards authService={authService} cardData={cardData}></Cards>
+            <Cards authService={authService} cardData={cardData} addCard={addCard}></Cards>
           </Route>
         </Switch>
       </BrowserRouter>
