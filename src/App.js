@@ -8,6 +8,7 @@ function App({authService}) {
   
   const [cardData, setCardData] = useState([
       {
+        id:1,
         name: '이름',
         company: 'Samsung',
         department: 'Softwear Engineer',
@@ -18,6 +19,7 @@ function App({authService}) {
         fileURL: null,
       },
       {
+        id:2,
         name: '이름',
         company: '회사',
         department: '부서',
@@ -36,6 +38,23 @@ function App({authService}) {
     setCardData(updated);
   }
 
+  const deleteCard = (event) => {
+    
+    event.preventDefault();
+    
+    const result = cardData.filter( (card) => {
+      return(card.id !== parseInt(event.target.dataset.id))
+    } );
+
+    const updated = result;
+    setCardData(updated);
+    
+  }
+
+  const changeCard = (event) => {
+    console.log(event.target.value);
+  }
+
   
 
   return (
@@ -46,11 +65,10 @@ function App({authService}) {
             <Login authService={authService}></Login>
           </Route>
           <Route exact path='/cards'>
-            <Cards authService={authService} cardData={cardData} addCard={addCard}></Cards>
+            <Cards authService={authService} cardData={cardData} addCard={addCard} deleteCard={deleteCard} changeCard={changeCard}></Cards>
           </Route>
         </Switch>
       </BrowserRouter>
-      
     </div>
   );
 }

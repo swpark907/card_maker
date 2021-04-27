@@ -10,12 +10,12 @@ const CardPreview = ({cardData}) => {
                 <h1 className={styles.title}>Preview</h1>
                 <ul className={styles.cardList}>
                     {cardData.map(card =>
-                        {   console.log(card.theme)
+                        {   
                             const url = card.fileURL || DEFAULT_IMAGE;
                             return(
-                            <li className={`${styles.card} ${getStyles(card.theme)}`}>
+                            <li key={card.id} className={`${styles.card} ${getStyles(card.theme)}`}>
                                 <div className={styles.cardContainer}>
-                                    <img src={url} alt="card-image" className={styles.cardImage}/>
+                                    <img src={url} alt="card-img" className={styles.cardImage}/>
                                     <div className={styles.cardInfo}>
                                         <h1 className={styles.cardName}>{card.name}</h1>
                                         <p className={styles.cardCompany}>{card.company}</p>
@@ -34,7 +34,7 @@ const CardPreview = ({cardData}) => {
 }
 
 const getStyles = (theme) => {
-        console.log(theme)
+        
         switch (theme){
             case 'dark':
                 return styles.dark;
@@ -43,7 +43,7 @@ const getStyles = (theme) => {
             case 'colorful' :
                 return styles.colorful;
             default :
-            throw new Error (`unknown theme : ${theme}`)
+            throw new Error (`${theme}`)
         }
 
     
