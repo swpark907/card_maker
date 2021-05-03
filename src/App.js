@@ -51,9 +51,20 @@ function App({authService}) {
     
   }
 
-  const changeCard = (event) => {
-    console.log(event.target.value);
+  const changeCard = (card) => {
+
+    console.log(card.id);
+    const updated = cardData.map(cards => {
+      if(card.id === cards.id){
+        return card;
+      }      
+      return cards;
+    }
+    )  
+    setCardData(updated);
+    
   }
+  
 
   
 

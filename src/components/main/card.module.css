@@ -1,0 +1,59 @@
+@value makerColorful from '../../common/colors.css';
+@value makerBlack from '../../common/colors.css';
+@value makerWhite from '../../common/colors.css';
+@value makerShadow from '../../common/colors.css';
+@value makerGreen from '../../common/colors.css';
+@value makerGrey from '../../common/colors.css';
+@value makerLightGrey from '../../common/colors.css';
+
+.maker{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;        
+    justify-content: center;
+}
+
+.title{
+    font-size: 2rem;
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+    border: 1px solid makerBlack
+}
+
+.input,
+.select{
+    font-size: 0.8rem;
+    padding: 0.5em;
+    border: 0;
+    border-bottom: 1px solid makerBlack;
+    border-right: 1px solid makerBlack;
+    width: 100%;
+    flex: 1 1 30%;
+}
+
+.textarea{
+    width: 100%;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus{
+    outline: 0;
+}
+
+.button{
+    width: 100%;
+    color: makerLightGrey;
+    font-size: 1em;
+    padding: 0.5em;
+    flex: 1 1 50%;
+    background-color: makerGreen;
+    outline: none;    
+    border: 1px solid makerGrey;
+}
