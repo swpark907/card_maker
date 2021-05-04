@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './card.maker.module.css'
 
-const CardAdd = ({addCard}) => 
+const CardAdd = ({FileInput, addCard}) => 
 {   
     const formRef = useRef();
     const nameRef = useRef();
@@ -10,6 +10,14 @@ const CardAdd = ({addCard}) =>
     const departmentRef = useRef();
     const emailRef = useRef();
     const commentRef = useRef();
+    const [file, setFile] = useState({fileName: null, fileURL: null,})
+
+    const onFileChange = file => {
+        setFile({
+            fileName: file.name,
+            fileURL: file.url,
+        })
+    }
 
     const onSubmit = (event) => {
         event.preventDefault();
@@ -21,10 +29,14 @@ const CardAdd = ({addCard}) =>
             department: departmentRef.current.value || '',
             email: emailRef.current.value || '',
             comment: commentRef.current.value || '',
+            fileName: file.fileName || '',
+            fileURL: file.fileURL || '',
+        }        
+        formRef.current.reset();
+        setFile({
             fileName: '',
             fileURL: '',
-        }
-        formRef.current.reset();
+        })
         addCard(card);
     }
 
@@ -41,7 +53,7 @@ const CardAdd = ({addCard}) =>
                             <input ref={departmentRef} className={styles.input}  type="text" name="department" placeholder="DEPARTMENT" />                    
                             <input ref={emailRef} className={styles.input}  type="text" name="email" placeholder="EMAIL" />
                             <textarea ref={commentRef} className={styles.textarea} type="text" name="comment" placeholder="COMMENT"/>
-                            <button className={styles.button}>Image</button>
+                            <button className={styles.button}> <FileInput name={file.fileName}onFileChange={onFileChange}/> </button>
                             <button className={styles.button} onClick={onSubmit}>ADD</button>
                         </form>
                     </div>

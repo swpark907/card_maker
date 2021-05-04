@@ -4,14 +4,14 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Cards from './components/main/cards';
 import { useState } from 'react';
 
-function App({authService}) {
+function App({FileInput, authService}) {
   
   const [cardData, setCardData] = useState([
       {
         id:1,
         name: '이름',
         company: 'Samsung',
-        department: 'Softwear Engineer',
+        department: 'Software Engineer',
         position: '직위',
         theme: 'dark',
         email: 'asdf@asdfasdfa.asdf',
@@ -31,10 +31,9 @@ function App({authService}) {
         },
       
   ])
-
-  const addCard = (newCard) => {
-    console.log(newCard);
-    const updated = [...cardData, newCard];
+    
+  const addCard = (newCard) => {    
+    const updated = [...cardData, newCard];    
     setCardData(updated);
   }
 
@@ -52,19 +51,16 @@ function App({authService}) {
   }
 
   const changeCard = (card) => {
-
-    console.log(card.id);
+    
     const updated = cardData.map(cards => {
       if(card.id === cards.id){
         return card;
       }      
       return cards;
     }
-    )  
-    setCardData(updated);
-    
+    )      
+    setCardData(updated);    
   }
-  
 
   
 
@@ -76,7 +72,7 @@ function App({authService}) {
             <Login authService={authService}></Login>
           </Route>
           <Route exact path='/cards'>
-            <Cards authService={authService} cardData={cardData} addCard={addCard} deleteCard={deleteCard} changeCard={changeCard}></Cards>
+            <Cards FileInput={FileInput} authService={authService} cardData={cardData} addCard={addCard} deleteCard={deleteCard} changeCard={changeCard} ></Cards>
           </Route>
         </Switch>
       </BrowserRouter>

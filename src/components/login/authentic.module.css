@@ -2,10 +2,14 @@
 
 ul{
     padding: 0px;    
+    
 }
 
-ul li{
-    list-style: none;
+.link li{
+    list-style: none;    
+    display: flex;
+    justify-content: center;
+    
 }
 
 .title{

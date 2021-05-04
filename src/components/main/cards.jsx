@@ -6,7 +6,7 @@ import CardPreview from './card.preview';
 import styles from './cards.module.css';
 
 
-const Cards = ({authService, cardData, addCard, deleteCard, changeCard}) => {
+const Cards = ({FileInput, authService, cardData, addCard, deleteCard, changeCard}) => {
     const onLogout = () => {
         authService.logout();
     }    
@@ -15,7 +15,7 @@ const Cards = ({authService, cardData, addCard, deleteCard, changeCard}) => {
         <section className={styles.cardSection}>
             <Header onLogout={onLogout} />
             <div className={styles.container}>
-                <CardMaker cardData={cardData} addCard={addCard} deleteCard={deleteCard} changeCard={changeCard}/>
+                <CardMaker FileInput={FileInput} cardData={cardData} addCard={addCard} deleteCard={deleteCard} changeCard={changeCard} />
                 <CardPreview cardData={cardData}/>                
             </div>
             
