@@ -1,35 +1,26 @@
 import Login from './components/login/login';
 import styles from './app.module.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, useHistory } from 'react-router-dom';
 import Cards from './components/main/cards';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App({FileInput, authService}) {
+
+  // const historyState = useHistory().state;
+  // console.log(historyState)
   
   const [cardData, setCardData] = useState([
       {
         id:1,
-        name: '이름',
-        company: 'Samsung',
-        department: 'Software Engineer',
-        position: '직위',
+        name: '',
+        company: '',
+        department: '',
+        position: '',
         theme: 'dark',
-        email: 'asdf@asdfasdfa.asdf',
-        comment: 'asdfasfas',
+        email: '',
+        comment: '',
         fileURL: null,
       },
-      {
-        id:2,
-        name: '이름',
-        company: '회사',
-        department: '부서',
-        position: '직위',
-        theme: 'colorful',
-        email: 'asdf@asdfasdfa.asdf',
-        comment: 'asdfasfas',
-        fileURL: 'images/logo.png',
-        },
-      
   ])
     
   const addCard = (newCard) => {    
