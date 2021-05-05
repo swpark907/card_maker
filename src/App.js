@@ -66,7 +66,7 @@ function App({FileInput, authService}) {
 
   return (
     <div className={styles.app}>
-      <BrowserRouter>
+      <BrowserRouter basename="/card_maker">
       <Switch>
           <Route exact path='/'>
             <Login authService={authService}></Login>
