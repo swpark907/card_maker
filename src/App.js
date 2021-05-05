@@ -9,26 +9,16 @@ function App({FileInput, authService}) {
   const [cardData, setCardData] = useState([
       {
         id:1,
-        name: '이름',
-        company: 'Samsung',
-        department: 'Software Engineer',
-        position: '직위',
+        name: '',
+        company: '',
+        department: '',
+        position: '',
         theme: 'dark',
-        email: 'asdf@asdfasdfa.asdf',
-        comment: 'asdfasfas',
+        email: '',
+        comment: '',
         fileURL: null,
       },
-      {
-        id:2,
-        name: '이름',
-        company: '회사',
-        department: '부서',
-        position: '직위',
-        theme: 'colorful',
-        email: 'asdf@asdfasdfa.asdf',
-        comment: 'asdfasfas',
-        fileURL: 'images/logo.png',
-        },
+      
       
   ])
     
