@@ -15,3 +15,6 @@
 - Cloudinary를 통한 사진 저장
 - Firebase 실시간 Database (구현중)
 - 화면 크기에 따른 반응형 웹
+
+## 참고
+- DreamCoding React
