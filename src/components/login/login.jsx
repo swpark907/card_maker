@@ -34,12 +34,7 @@ const Login = ({authService, setUserId}) => {
 
     useEffect( () => {
         authService.onAuthChange(user => {
-<<<<<<< HEAD
             user && goToCards(user.uid);     
-=======
-            user && goToCards(user.uid);
-            
->>>>>>> origin/master
         })
     } )
 
