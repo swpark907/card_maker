@@ -32,7 +32,7 @@ const Login = ({authService, setUserId}) => {
 
     useEffect( () => {
         authService.onAuthChange(user => {
-            user && goToCards(user.uid);
+            user && goToCards(user.uid);     
         })
     } )
 
