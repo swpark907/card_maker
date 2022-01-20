@@ -10,6 +10,7 @@ import { useHistory } from 'react-router';
 
 const Login = ({authService, setUserId}) => {
     const history = useHistory();
+    
     const goToCards = (userId) => {
         history.push(
             {
@@ -18,6 +19,7 @@ const Login = ({authService, setUserId}) => {
             }
         )
         setUserId(userId);
+
     }
 
     useEffect( () => {
@@ -32,7 +34,12 @@ const Login = ({authService, setUserId}) => {
 
     useEffect( () => {
         authService.onAuthChange(user => {
+<<<<<<< HEAD
             user && goToCards(user.uid);     
+=======
+            user && goToCards(user.uid);
+            
+>>>>>>> origin/master
         })
     } )
 

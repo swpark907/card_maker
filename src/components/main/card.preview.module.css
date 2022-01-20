@@ -86,3 +86,7 @@ p{
     transform: translateY(0.5em);
     
 }
+
+.cardName{
+    margin: 5px 0;
+}

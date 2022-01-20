@@ -2,6 +2,7 @@
   "name": "card-maker",
   "version": "0.1.0",
   "private": true,
+
   "homepage": "https://swpark907.github.io/card_maker",
 
   "dependencies": {

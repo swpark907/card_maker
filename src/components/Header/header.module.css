@@ -3,7 +3,8 @@
 
 header{
     background-color: makerPink;  
-    position: relative;
+    width: 100%;
+    /* position: fixed ; */
     
 }
 

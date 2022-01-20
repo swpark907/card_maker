@@ -4,6 +4,7 @@ import CardAdd from './card.add';
 import styles from './card.maker.module.css'
 
 const CardMaker = ({FileInput, cardData, addCard, deleteCard, changeCard, cardRepository}) => {
+
     
     
     
