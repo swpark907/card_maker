@@ -21,6 +21,11 @@ const Card = ({FileInput, deleteCard, changeCard, card}) =>{
           fileURL: file.url,
         })
       }
+
+    const onSubmit = (event) => {
+        event.preventDefault();
+        deleteCard(card);
+    }
     
     return(
     <div key={card.id} className="item">
@@ -36,7 +41,7 @@ const Card = ({FileInput, deleteCard, changeCard, card}) =>{
             <input className={styles.input}  type="text" name="email" placeholder="EMAIL" value={card.email} onChange={onChange} card={card} />
             <textarea className={styles.textarea} type="text" name="comment" placeholder="COMMENT"  value={card.comment} onChange={onChange} card={card}/>
             <button className={styles.button}> <FileInput name={card.fileName} onFileChange={onFileChange}/> </button>
-            <button className={styles.button} onClick={deleteCard} data-id={card.id}>DELETE</button>
+            <button className={styles.button} onClick={onSubmit} data-id={card.id}>DELETE</button>
         </form>
         
     </div>

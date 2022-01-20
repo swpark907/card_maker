@@ -3,16 +3,16 @@ import Card from './card';
 import CardAdd from './card.add';
 import styles from './card.maker.module.css'
 
-const CardMaker = ({FileInput, cardData, addCard, deleteCard, changeCard}) => {
+const CardMaker = ({FileInput, cardData, addCard, deleteCard, changeCard, cardRepository}) => {
     
     
     
     return (
             <section className={styles.maker}>
             <h1 className={styles.title}>Maker</h1>
-            {cardData.map( card => {
+            {Object.keys(cardData).map( key => {
                 return(                    
-                    <Card key={card.id} FileInput={FileInput} card={card} deleteCard={deleteCard} changeCard={changeCard}></Card>                    
+                    <Card key={key} FileInput={FileInput} card={cardData[key]} deleteCard={deleteCard} changeCard={changeCard}></Card>                    
                     )
                 } )
             }
