@@ -8,7 +8,7 @@ import styles from './login.module.css'
 import { useHistory } from 'react-router';
 
 
-const Login = ({authService}) => {
+const Login = ({authService, setUserId}) => {
     const history = useHistory();
     const goToCards = (userId) => {
         history.push(
@@ -17,12 +17,15 @@ const Login = ({authService}) => {
                 state: {id: userId},
             }
         )
+        setUserId(userId);
     }
 
     useEffect( () => {
         authService.onAuthChange(user => {
-            if(!user) {
-                history.push('/')
+            if(user) {
+                setUserId(user.id);
+            } else{
+                history.push('/');
             }
         })
     })
