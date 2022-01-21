@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
 
-  "homepage": "https://swpark907.github.io/card_maker",
+  "homepage": "https://card-maker-psw.netlify.app",
 
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
