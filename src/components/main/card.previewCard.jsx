@@ -19,7 +19,6 @@ const PreviewCard = ({ url, card }) => {
 };
 
 const getStyles = (theme) => {
-  console.log(theme);
   switch (theme) {
     case "dark":
       return styles.dark;
@@ -27,8 +26,8 @@ const getStyles = (theme) => {
       return styles.light;
     case "colorful":
       return styles.colorful;
-    // default:
-    //   throw new Error(`${theme}`);
+    default:
+      throw new Error(`${theme}`);
   }
 };
 

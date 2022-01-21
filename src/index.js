@@ -11,7 +11,6 @@ import CardRepository from './service/card_repository';
 const cardRepository = new CardRepository();
 const authService = new AuthService();
 const imageUploader = new ImageUploader();
-const cardRepostiory = new CardRepository();
 
 const FileInput = props => (
   <ImageFileInput {...props} imageUploader = {imageUploader} />
